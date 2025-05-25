@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# VBULK - Sosyal Medya İçerik İndirme ve Görüntüleme Uygulaması
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VBULK, popüler sosyal medya platformlarından içerik indirmeye yarayan modern ve kullanımı kolay bir web uygulamasıdır. Instagram, YouTube ve TikTok platformlarından video, resim ve ses dosyalarını hızlı ve kolay bir şekilde indirebilirsiniz,görüntüleyebilirsiniz.
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🚀 Özellikler
 
-### `npm start`
+### Instagram Görüntüleme
+- Kullanıcı adından profil bilgilerini ve gönderileri çekme
+- Kullanıcı bilgilerini görüntüleme (takipçi sayısı, gönderi sayısı, vb.)
+- Profil resmini ve son 12 gönderiyi görüntüleme
+- Carousel (çoklu) gönderilerde tüm medyaları görüntüleme
+- Görselleri ve videoları yüksek kalitede indirme
+- CORS sorunlarını aşmak için proxy sunucusu kullanımı
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### YouTube İndirme
+- Video ve shorts (kısa video) indirme desteği
+- URL'den video ID çıkarma ve bilgilerini getirme
+- Farklı kalite seçenekleriyle video indirme
+- MP3 formatına dönüştürme ve ses dosyası olarak indirme
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### TikTok İndirme
+- TikTok video ve müziklerini filigransız indirme
+- Farklı kalite seçenekleri sunma
+- Hem video hem de sadece ses formatında indirme
 
-### `npm test`
+## 🔧 Teknolojiler
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** React, TypeScript, Material UI
+- **Backend:** Node.js, Express
+- **API Entegrasyonu:** Instagram, Tiktok RapidAPI ve @distube/ytdl-core
+- **Paket Yönetimi:** npm
 
-### `npm run build`
+## 📋 Kurulum
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Projeyi klonlayın:
+```bash
+git clone https://github.com/zwennnnn/vbulk.git
+cd vbulk
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Bağımlılıkları yükleyin:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. İlgili API Keyleri yerleştirin: 
+```
+Tiktok API Linki: https://rapidapi.com/7scorp-7scorp-default/api/tiktok-downloader-download-tiktok-videos-without-watermark
 
-### `npm run eject`
+Link üzerinden subscribe oluyorsunuz ve RapidAPI keyinizi projede server.js de "KEY GIRINIZ" yazan yere yapıştırıyorsunuz.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Instagram API Linki: https://rapidapi.com/SocialScrapper/api/instagram-scrapper-posts-reels-stories-downloader
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Link üzerinden subscribe oluyorsunuz ve RapidAPI keyinizi projede InstagramDownloader.tsx de "KEY GIRINIZ" yazan yere yapıştırıyorsunuz.
+```
+4. Geliştirme modunda çalıştırın:
+```bash
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Tarayıcınızda açın:
+```
+http://localhost:3000
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Server varsayılan olarak 3001 portunda çalışacaktır.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📝 Kullanım
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Anasayfadan indirmek istediğiniz platformu seçin (Instagram, YouTube veya TikTok)
+2. İndirmek istediğiniz içeriğin URL'sini veya kullanıcı adını girin
+3. "Bilgileri Getir" butonuna tıklayın
+4. İndirmek istediğiniz içeriği ve kalitesini seçip indirin
+
+## ⚠️ Önemli Not
+
+Bu uygulama yalnızca eğitim amaçlıdır ve telif hakkı sahibinin izni olmadan içerik indirmek için kullanılmamalıdır. İndirilen tüm içerikler için telif hakkı sorumluluğu kullanıcıya aittir.
+
+## 👨‍💻 Katkıda Bulunma
+
+1. Projeyi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
+4. Branch'inize push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+
+## 📞 İletişim
+
+Sorularınız için: [yagizzeke@gmail.com](mailto:yagizzeke@gmail.com)
+
+---
+
+⭐️ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
